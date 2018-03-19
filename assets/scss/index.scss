@@ -1,0 +1,732 @@
+@function torem($px) {
+    @return $px / 108px * 1rem;
+}
+
+.clear-fixed::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+body {
+	background: #f4f4f4;
+	overflow-x: hidden;
+}
+
+/*顶部网易严选APP start*/
+.header .hd {
+	height: 116px;
+}
+.topbar {
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.open {
+    padding: torem(16px) torem(30px);
+    background-color: #333;
+    color: #fff;
+}
+
+.open .close {
+	float: left;
+    display: inline-block;
+    margin-top: torem(20px);
+    margin-right: torem(20px);
+    width: torem(60px);
+    height: torem(60px);
+    background: url(../images/logo.png) no-repeat torem(-6px) torem(-280px);
+    background-size: torem(246px);
+    vertical-align: middle;
+}
+.open .cnt {
+	float: left;
+	display: inline-block;
+}
+.open .cnt .logo {
+	float: left;
+    display: inline-block;
+    margin-right: torem(16px);
+    width: torem(108px);
+    height: torem(108px);
+    background: url('../images/logo.png') no-repeat torem(2px) torem(-356px);
+	background-size: torem(246px);
+	vertical-align: middle;
+}
+.open .cnt .text {
+	float: left;
+	padding-top: torem(10px)
+}
+.open .cnt .text1 {
+	margin-bottom: torem(10px)
+}
+.open a.open-app {
+	float: right;
+	width: torem(194px);
+	height: torem(76px);
+	line-height: torem(76px);
+	text-align: center;
+	color: #fff;
+    border: 1px solid #b4282d;
+    background-color: #b4282d;
+    border-radius: 2px;
+    margin-top: torem(14px)
+}
+/*顶部网易严选APP end*/
+
+/*搜索 start*/
+
+.search-box .line {
+	display: flex;
+	align-items: center;
+	padding: torem(26px) torem(44px);
+	background-color: #fff;
+}
+.line .logo {
+	display: inline-block;
+	margin-right: torem(24px);
+	width: torem(206px);
+	height: torem(54px);
+	background: url(../images/logo.png) no-repeat torem(-6px) torem(-170px);
+	background-size: torem(218px);
+}
+.line .search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: torem(770px);
+	height: torem(82px);
+	background-color: #ededed;
+	border-radius: 4px;
+}
+.line .search .icon {
+	display: inline-block;
+	margin-right: torem(16px);
+	width: torem(50px);
+	height: torem(50px);
+	background: url(../images/logo.png) no-repeat torem(-10px) torem(-336px);
+    background-size: torem(170px);
+}
+.line .search span {
+	color: #666;
+	font-size: torem(40px)
+
+}
+/*搜索 end*/
+
+/*导航 start*/
+.tabs {
+	height: torem(78px);
+	line-height: torem(78px);
+	border-bottom: torem(1px) solid #d9d9d9;
+	background: #fff;
+}
+.tabs span {
+	font-size: torem(40px);
+	color: #333;
+	margin-left: torem(60px);
+	padding: torem(16px);
+}
+
+.tabs .active {
+	position: relative;
+}
+
+.tabs .active span {
+	color: #b4282d;	
+}
+.tabs .active span::after {
+	content: ' ';
+    position: absolute;
+    left: torem(46px);
+    bottom: 0;
+    width: torem(126px);
+    height: .05333rem;
+    background-color: #b4282d;
+}
+/*导航 end*/
+
+/*轮播图*/
+.floor {
+	margin-bottom: torem(28px);
+	background: #fff;
+}
+.carousel {
+	position: relative;
+	width: 100%;
+	height: torem(580px);
+}
+.carousel div{
+	/*position: absolute;*/
+	width: 100%;
+	height: 100%;
+}
+.carousel div img {
+	width: 100%;
+	height: 100%;
+}
+.carousel > .swiper-pagination-bullets {
+  bottom: -170px !important;
+}
+
+.carousel .swiper-pagination-bullet {
+  width: torem(60px);
+  height: torem(6px);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.slide .introduce {
+	background-color: #fff;
+}
+.slide .introduce .menu {
+	display: flex;
+    align-items: center;
+    padding: 0 torem(40px);
+	height: torem(106px);
+}
+.slide .introduce .menu .list {
+	flex: 1;
+}
+.slide .introduce .menu .list a i {
+	display: inline-block;
+	width: torem(45px);
+	height: torem(45px);
+	background: url(../images/small-nav/1.png) no-repeat;
+    background-size: 16px;
+    vertical-align: -2px;
+}
+
+/*品牌制造商*/
+.floor .hd {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    font-size: torem(46px);
+	height: torem(162px);
+	background-color: #fff;
+}
+.floor .hd a i {
+	display: inline-block;
+	width: torem(50px);
+	height: torem(50px);
+	background: url(../images/right.png) no-repeat;
+    background-size: 16px;
+    vertical-align: middle;
+}
+
+.brand .content .list {
+	margin: 0 torem(26px);
+}
+.brand .item {
+	display: inline-block;
+	position: relative;
+	width: torem(508px);
+	height: torem(330px);
+	background-color: #f4f4f4;
+	margin-bottom: torem(10px);
+	/*margin-right: torem(10px);*/
+}
+.brand .item .text {
+	position: absolute;
+	top: 0;
+	padding-top: torem(28px);
+	padding-left: torem(28px);
+	font-size: torem(40px)
+} 
+.brand .item .text h4.title {
+	margin-bottom: torem(16px);
+}
+.brand .item a img {
+	width: 100%;
+	height: 100%;
+}
+.brand .item .text .new {
+	display: block;
+	width: torem(94px);
+	height: torem(46px);
+	background: url(../images/news/new.png) no-repeat;
+	background-size: cover;
+	margin-top: torem(26px);
+}
+/*新品首发*/
+
+.new .hd {
+	height: torem(374px);
+	background: url(../images/news/1-1.png);
+	background-size: torem(1080px) torem(378px);
+	margin-bottom: torem(46px)
+} 
+.new .hd .text {
+	display: block;
+	text-align: center;
+}
+.new .hd .text .day {
+	display: block;
+	margin-bottom: torem(26px);
+	font-size: torem(54px);
+	color: #8BA0B6;
+}
+.new .hd .text .all {
+	display: block;
+	margin: 0 auto;
+	width: torem(348px);
+	height: torem(82px);
+	line-height: torem(82px);
+	text-align: center;
+	background: #D8E5F1;
+}
+.new .hd .text .all span {
+	color: #8BA0B6;
+	font-size: torem(40px);
+}
+.new .hd .text .all .icon {
+	background: url(../images/right-small.png) no-repeat;
+    background-position: 5px 2px;
+    background-size: 6px;
+    vertical-align: -4px;
+}
+
+
+.new .content {
+	overflow: hidden;
+}
+.new .content ul {
+	width: 2160px;
+}
+.new .content li {
+	position: relative;
+	float: left;
+	width: torem(404px) !important;
+	background: #fff;
+	margin-left: torem(40px)
+}
+.new .content .img {
+	width: torem(404px);
+	height: torem(404px);
+	background: #f4f4f4;
+}
+.new .content img {
+	width: 100%;
+	height: 100%;
+}
+.new .content .title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 torem(30px);
+	margin: torem(26px) 0;
+	font-size: torem(42px);
+}
+.new .content .tehui {
+	color: #7f7f7f;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 torem(30px);
+	margin-bottom: torem(20px);
+}
+.new .content .price {
+	color: #b4282d;
+	margin-left: torem(22px);
+	
+}
+
+.content .label {
+	/*height: torem(70px);*/
+	line-height: torem(60px);
+	text-align: center;
+	margin-top: torem(26px);
+
+}
+.content .label span {
+	width: torem(66px);
+	height: torem(26px);
+	padding: torem(2px) torem(20px);
+	color: #fff;
+	background: #e5686d;
+	border-radius: 6px;
+}
+.content .label span.add {
+	background: #f48f18;
+}
+.new .content .speci {
+	position: absolute;
+	top: torem(10px);
+	left: torem(10px);
+	width: torem(42px);
+	border: torem(2px) solid #b4a078;
+	padding: torem(14px) 0;
+}
+.new .content .speci div {
+	text-align: center;
+	color: #b4a078;
+	font-size: torem(34px);
+}
+.new .content .allLook {
+	width: torem(360px) !important;
+	height: torem(360px);
+	line-height: torem(360px);
+	border: torem(14px) solid #f4f4f4;
+	margin-left: torem(40px);
+	margin-right: torem(40px);
+	text-align: center;
+}
+.new .content .allLook .all {
+	font-size: torem(40px);
+	color: #666;
+}
+
+/*人气推荐*/
+.popular .hd {
+	background: url(../images/popular/1-1.png) no-repeat;
+	background-size: torem(1080px) torem(378px);
+}
+.popular .hd .text span.day{
+	color: #B4A078;
+}
+.popular .hd .text .all {
+	background: #F4E9CB;
+}
+.popular .hd .text .all span {
+	color: #B4A078;
+}
+.popular .hd .text .all i.icon {
+	background: url(../images/ri.png) no-repeat;
+    background-position: 5px 2px;
+    background-size: 6px;
+}
+
+/*限时购*/
+
+.timeBuy {
+	height: torem(550px);
+	background: #fff;
+	padding: torem(40px) torem(80px);
+	margin-bottom: torem(28px);
+}
+.timeBuy .left {
+	float: left;
+	line-height: torem(90px);
+	/*text-align: center;*/
+	margin-top: torem(160px);
+}
+.timeBuy .left .title {
+	font-size: torem(54px);
+	letter-spacing: torem(16px);
+	margin-bottom: torem(20px);
+}
+.timeBuy .left span.num {
+	display: inline-block;
+	width: torem(90px);
+	height: torem(90px);
+	font-size: torem(40px);
+	color: #fff;
+	background: #424642;
+	text-align: center;
+	border-radius: torem(10px);
+}
+.timeBuy .left .next {
+	margin-top: torem(20px);
+}
+.timeBuy .right {
+	position: relative;
+	float: right;
+	width: torem(450px);
+	height: torem(450px);
+	margin-top: torem(80px);
+}
+.timeBuy .right img {
+	width: 100%;
+	height: 100%;
+}
+
+.timeBuy .right .img-pri {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	bottom: torem(10px);
+	width: torem(150px);
+	height: torem(150px);
+	color: #fff;
+	background: #f7931f;
+	border-radius: 50%;
+}
+
+/*福利社*/
+.weal {
+	width: 100%;
+	height: torem(434px);
+	margin-bottom: torem(28px);
+}
+.weal img {
+	width: 100%;
+	height: 100%;
+}
+
+/*专题精选*/
+.special .special-content .item {
+	width: 100%;
+}
+.special .special-content .item a {
+	display: block;
+    width: 100%;
+    height: torem(564px);
+    margin-bottom: torem(30px)
+}
+.special .subtitle {
+	padding: 0 torem(42px);
+    font-size: torem(46px);
+    margin-bottom: torem(20px)
+}
+.special .subtitle h4 {
+	float: left;
+}
+.special .subtitle span {
+	float: right;
+    color: #b4282d;
+}
+.special .bot {
+	padding: 0 torem(42px);
+	font-size: torem(36px);
+	color: #7F7F7F;
+}
+
+/*居家好物*/
+.home {
+
+	width: 100%;	
+	background: #fff;
+	margin-bottom: torem(28px);
+}
+.home .header {
+	width: 100%;
+	height: torem(170px);
+	line-height: torem(170px);
+	text-align: center;
+	font-size: torem(40px);
+}
+.home .header h3 {
+	display: inline-block;
+}
+.home .header i {
+	display: inline-block;
+	width: torem(50px);
+	height: torem(50px);
+	vertical-align: middle;
+	background: url(../images/right.png) no-repeat;
+	background-size: torem(46px);
+}
+.home .good-content ul{
+	clear: both;
+}
+.home .good-content .item {
+	position: relative;
+	float: left;
+	width: torem(498px);
+	height: torem(794px);
+	background: #fff;
+	padding: 0 torem(14px) torem(38px) torem(28px);
+}
+.home .good-content .item .top {
+	height: torem(600px);
+	background: #f4f4f4;
+}
+.home .good-content .item .top img {
+	width: torem(498px);
+	height: torem(498px);
+	vertical-align: top;
+}
+.home .good-content .item .top div {
+	/*text-align: center;*/
+	line-height: torem(95px);
+	color: #9F8A60;
+	background: #F1ECE2;
+	padding: 0 torem(18px);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.home .good-content .item .buttom {
+	color: #fff;
+	margin: torem(28px) 0;
+	padding-left: torem(18px);
+}
+.home .good-content .item .good {
+	background: #e5686d;
+	font-size: torem(32px);
+	padding: 0 torem(24px);
+	border-radius: torem(8px);
+}
+.home .good-content .item .add {
+	background: #f48f18;
+	font-size: torem(32px);
+	padding: 0 torem(24px);
+	border-radius: torem(8px);
+}
+.home .good-content .item .name {
+	font-size: torem(40px);
+	padding-left: torem(18px);
+	padding-right: torem(38px);
+	margin-bottom: torem(18px);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.home .good-content .item .price {
+	font-size: torem(42px);
+	color: #b4282d;
+	padding-left: torem(18px);
+}
+.home .good-content .item-left {
+	float: left;
+	width: torem(498px);
+	height: torem(794px);
+	background: #fff;
+	padding: 0 torem(28px) torem(38px) torem(14px);
+}
+.home .good-content .item .speci {
+	position: absolute;
+	top: torem(16px);
+	left: torem(42px);
+	width: torem(42px);
+	border: torem(2px) solid #b4a078;
+	padding: torem(14px) 0;
+}
+.home .good-content .item .speci div {
+	text-align: center;
+	color: #b4a078;
+	font-size: torem(34px);
+}
+.home .good-content .item .top-last {
+	height: torem(420px);
+	font-size: torem(46px);
+	text-align: center;
+	padding-top: torem(180px);
+}
+.home .good-content .item .top-last i {
+	display: block;
+	margin: 0 auto;
+	margin-top: torem(90px);
+	width: torem(100px);
+	height: torem(100px);
+	background: url(../images/you.png) no-repeat;
+	background-size: contain;
+}
+
+/*最底部*/
+.footer {
+	height: torem(358px);
+	background: #414141;
+	padding-bottom: torem(142px);
+}
+.footer .content {
+	text-align: center;
+	padding: torem(80px) torem(34px) torem(42px) torem(34px);
+}
+.footer .content .top a {
+	display: inline-block;
+	width: torem(242px);
+	height: torem(88px);
+	line-height: torem(88px);
+	color: #fff;
+	border: torem(3px) solid #999;
+	border-radius: torem(4px);
+	margin-right: torem(68px);
+}
+.footer .content .but {
+	color: #999;
+	margin-top: torem(60px);
+}
+.footer .content .but span {
+	display: inline-block;
+	margin-bottom: torem(8px);
+}
+
+/*最底部菜单*/
+.bottom-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	height: torem(142px);
+	background: #fafafa;
+	border-top: 1px solid #d9d9d9;
+	z-index: 1000;
+}
+.bottom-bar a {
+	display: inline-block;
+	text-align: center;
+	margin-top: torem(20px);
+}
+.bottom-bar a i.item1 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-287px);
+	background-size: torem(59px);
+}
+.bottom-bar a span {
+	display: block;
+	color: #666;
+}
+.bottom-bar a span.active {
+	color: #b4282d;
+}
+.bottom-bar a i.item2 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-508px);
+	background-size: torem(59px);
+}
+.bottom-bar a i.item3 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-212px);
+	background-size: torem(59px);
+}
+.bottom-bar a i.item4 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat torem(-3px) torem(-68px);
+	background-size: torem(59px);
+}
+.bottom-bar a i.item5 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-659px);
+	background-size: torem(59px);
+}
+
+/*固定定位*/
+.fixed {
+	display: block;
+	position: fixed;
+	right: 0;
+	bottom: torem(342px);
+	z-index: 100;
+}
+.fixed img {
+	width: torem(165px);
+	height: torem(117px);
+}
+.goTop {
+	display: none;
+	position: fixed;
+	right: torem(34px);
+	bottom: torem(176px);
+	z-index: 100;
+}
+.goTop img {
+	width: torem(122px);
+	height: torem(122px);
+}

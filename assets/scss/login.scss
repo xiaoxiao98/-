@@ -1,0 +1,183 @@
+@function torem($px) {
+    @return $px / 108px * 1rem;
+}
+
+.clear-fixed::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+body {
+	overflow-x: hidden;
+}
+
+/*顶部网易严选APP start*/
+.topbar {
+	width: 100%;
+	/*position: fixed;*/
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.open {
+    padding: torem(16px) torem(30px);
+    background-color: #333;
+    color: #fff;
+}
+
+.open .close {
+	float: left;
+    display: inline-block;
+    margin-top: torem(20px);
+    margin-right: torem(20px);
+    width: torem(60px);
+    height: torem(60px);
+    background: url(../images/logo.png) no-repeat torem(-6px) torem(-280px);
+    background-size: torem(246px);
+    vertical-align: middle;
+}
+.open .cnt {
+	float: left;
+	display: inline-block;
+}
+.open .cnt .logo {
+	float: left;
+    display: inline-block;
+    margin-right: torem(16px);
+    width: torem(108px);
+    height: torem(108px);
+    background: url('../images/logo.png') no-repeat torem(2px) torem(-356px);
+	background-size: torem(246px);
+	vertical-align: middle;
+}
+.open .cnt .text {
+	float: left;
+	padding-top: torem(10px)
+}
+.open .cnt .text1 {
+	margin-bottom: torem(10px)
+}
+.open a.open-app {
+	float: right;
+	width: torem(194px);
+	height: torem(76px);
+	line-height: torem(76px);
+	text-align: center;
+	color: #fff;
+    border: 1px solid #b4282d;
+    background-color: #b4282d;
+    border-radius: 2px;
+    margin-top: torem(14px)
+}
+
+/*网易严选*/
+.header .tit {
+	background: #f4f4f4;
+}
+.title-header {
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding: 0 torem(46px);
+	height: torem(124px);
+}
+.title-header::after {
+	content: '';
+    position: absolute;
+    background-color: #d9d9d9;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+}
+.title-header .home {
+	flex: 1;
+	display: inline-block;
+	width: torem(72px);
+	height: torem(66px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-466px);
+	background-size: torem(74px);
+}
+.title-header .title-box {
+	flex: 1;
+}
+.title-header .title {
+	display: inline-block;
+	margin-right: torem(24px);
+	width: torem(236px);
+	height: torem(62px);
+	background: url(../images/logo.png) no-repeat torem(-8px) torem(-194px);
+	background-size: torem(256px);
+}
+.title-header .search {
+	display: inline-block;
+	width: torem(72px);
+	height: torem(66px);
+	background: url(../images/logo.png) no-repeat torem(-10px) torem(-464px);
+    background-size: torem(234px);
+    margin-right: torem(26px);
+}
+.title-header .cart {
+	display: inline-block;
+	width: torem(72px);
+	height: torem(66px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-90px);
+	background-size: torem(70px);
+}
+
+/*表单*/
+.c-cnt {
+	padding: 0 torem(60px);
+	padding-top: torem(140px);
+	background: #fff;
+}
+.c-cnt .input,.pass{
+	width: 100%;
+	height: torem(140px);
+	border-bottom: 1px solid #d9d9d9;
+}
+.c-cnt input {
+	width: 100%;
+	font-size: torem(40px);
+	margin: torem(46px) 0;
+	border: 0;
+}
+::placeholder {
+	color: #bdbdbd;
+}
+.loginbox {
+	font-size: torem(42px);
+	margin-top: torem(86px);
+	margin-bottom: torem(56px);
+}
+.loginbox a {
+	width: 100%;
+	display: inline-block;
+	height: torem(140px);
+	line-height: torem(140px);
+	text-align: center;
+	color: #cb7a7a;
+	background: #b4282d;
+	border-radius: 3px;
+}
+.goreg .reg,.forget{
+	font-size: torem(40px);
+	color: #7f7f7f;
+}
+.goreg .forget {
+	float: right;
+}
+
+/*其他方式登录*/
+.else {
+	width: 100%;
+	display: inline-block;
+	height: torem(140px);
+	line-height: torem(140px);
+	text-align: center;
+	color: #b4282d;
+	font-size: torem(40px);
+	border: 1px solid #b4282d;
+	border-radius: 3px;
+	margin-top: torem(186px);
+}

@@ -1,0 +1,392 @@
+@function torem($px) {
+    @return $px / 108px * 1rem;
+}
+
+.clear-fixed::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+body {
+	background: #f4f4f4;
+	overflow-x: hidden;
+}
+
+/*顶部网易严选APP start*/
+.topbar {
+	width: 100%;
+	/*position: fixed;*/
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.open {
+    padding: torem(16px) torem(30px);
+    background-color: #333;
+    color: #fff;
+}
+
+.open .close {
+	float: left;
+    display: inline-block;
+    margin-top: torem(20px);
+    margin-right: torem(20px);
+    width: torem(60px);
+    height: torem(60px);
+    background: url(../images/logo.png) no-repeat torem(-6px) torem(-280px);
+    background-size: torem(246px);
+    vertical-align: middle;
+}
+.open .cnt {
+	float: left;
+	display: inline-block;
+}
+.open .cnt .logo {
+	float: left;
+    display: inline-block;
+    margin-right: torem(16px);
+    width: torem(108px);
+    height: torem(108px);
+    background: url('../images/logo.png') no-repeat torem(2px) torem(-356px);
+	background-size: torem(246px);
+	vertical-align: middle;
+}
+.open .cnt .text {
+	float: left;
+	padding-top: torem(10px)
+}
+.open .cnt .text1 {
+	margin-bottom: torem(10px)
+}
+.open a.open-app {
+	float: right;
+	width: torem(194px);
+	height: torem(76px);
+	line-height: torem(76px);
+	text-align: center;
+	color: #fff;
+    border: 1px solid #b4282d;
+    background-color: #b4282d;
+    border-radius: 2px;
+    margin-top: torem(14px)
+}
+/*顶部网易严选APP end*/
+
+/*最底部菜单*/
+.bottom-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	height: torem(142px);
+	background: #fafafa;
+	border-top: 1px solid #d9d9d9;
+	z-index: 1000;
+}
+.bottom-bar a {
+	display: inline-block;
+	text-align: center;
+	margin-top: torem(20px);
+}
+.bottom-bar a i.item1 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-370px);
+	background-size: torem(59px);
+}
+.bottom-bar a span {
+	display: block;
+	color: #666;
+}
+.bottom-bar a span.active {
+	color: #b4282d;
+}
+.bottom-bar a i.item2 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-508px);
+	background-size: torem(59px);
+}
+.bottom-bar a i.item3 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-212px);
+	background-size: torem(59px);
+}
+.bottom-bar a i.item4 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat torem(-3px) torem(-0px);
+	background-size: torem(59px);
+}
+.bottom-bar a i.item5 {
+	display: inline-block;
+	width: torem(62px);
+	height: torem(62px);
+	background: url(../images/buttom-bar/1.png) no-repeat 0 torem(-659px);
+	background-size: torem(59px);
+}
+.bottom-bar .cart {
+	position: relative;
+}
+.bottom-bar .cart .add {
+	position: absolute;
+	top: 0;
+	left: torem(66px);
+	width: torem(40px);
+	height: torem(40px);
+	color: #fff;
+	background-color: #b4282d;
+	border-radius: 50%;
+}
+
+/*固定定位*/
+.fixed {
+	display: block;
+	position: fixed;
+	right: 0;
+	bottom: torem(342px);
+	z-index: 100;
+}
+.fixed img {
+	width: torem(165px);
+	height: torem(117px);
+}
+.goTop {
+	display: none;
+	position: fixed;
+	right: torem(34px);
+	bottom: torem(176px);
+	z-index: 100;
+}
+.goTop img {
+	width: torem(122px);
+	height: torem(122px);
+}
+
+/*购物车*/
+.cart-header {
+	position: relative;
+	padding: 0 torem(46px);
+	height: torem(124px);
+	line-height: torem(124px);
+	text-align: center;
+	background: #fff;
+}
+.cart-header .cart {
+	font-size: torem(50px)
+}
+.cart-header .compile {
+	position: absolute;
+	right: torem(46px);
+	font-size: torem(46px)
+}
+.cart-header::after {
+	content: '';
+    position: absolute;
+    background-color: #d9d9d9;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+}
+
+/*满足免邮条件*/
+.satisfy {
+	padding: 0 torem(46px);
+	height: torem(116px);
+	line-height: torem(116px);
+	color: #f48f18;
+    background-color: #fff8d8;
+}
+
+/*购物车内容*/
+.cart-content .list .item {
+	margin-bottom: torem(28px);
+}
+.cart-content .list .hd {
+	display: flex;
+	align-items: center;
+	height: torem(134px);
+	padding: 0 torem(46px);
+	background: #fff;
+}
+.cart-content .list .pro {
+	display: flex;
+	align-items: center;
+	margin-right: torem(56px);
+}
+.cart-content .list .all {
+    padding: 0 torem(10px);
+    vertical-align: middle;
+    line-height: torem(50px);
+    font-size: torem(30px);
+    color: #f48f18;
+    border: 1px solid #f48f18;
+    border-radius: 2px;
+    margin-right: torem(12px);
+}
+.cart-content .list .promList {
+	display: flex;
+	align-items: center;
+	line-height: torem(60px);
+	margin-right: torem(64px);
+}
+.cart-content .list .promTip {
+	font-size: torem(40px);
+
+}
+.cart-content .list .icon {
+	display: inline-block;
+	width: torem(40px);
+	height: torem(40px);
+	background: url(../images/right-small.png) no-repeat;
+	background-size: 6px;
+}
+.cart-content .list .item .go {
+	font-size: torem(40px);
+	line-height: torem(80px);
+	padding-left: torem(16px);
+	border-left: 1px solid #d9d9d9;
+}
+/*商品*/
+.cart-content .item .shop {
+	background: #fff;
+}
+.cart-content .shop .cartShop {
+	position: relative;
+	padding-left: torem(128px);
+}
+.cart-content .shop .shopBox .icon {
+	position: absolute;
+	left: torem(32px);
+	top: 38%;
+	margin: auto;
+	display: inline-block;
+	width: torem(58px);
+	height: torem(58px);
+	background: url(../images/cart/1.png) no-repeat;
+	background-size: torem(56px);
+	background-position: 0 torem(-282px)
+} 
+.cart-content .shop .right {
+	height: torem(300px);
+	padding-right: torem(42px);
+}
+.cart-content .shop .right .tu {
+	float: left;
+	position: relative;
+    top: 12%;
+	background-color: #f4f4f4;
+    width: 77px;
+    height: 77px;
+    border-radius: 4px;
+    margin-right: torem(30px);
+}
+.cart-content .shop .right .cnt {
+	position: relative;
+	top: 12%;
+}
+.cart-content .shop .right .title {
+	height: torem(52px);
+	font-size: torem(40px)
+}
+.cart-content .right .tit {
+	float: left;
+}
+.cart-content .shop .right .num {
+	float: right;
+}
+.cart-content .shop .right .weight {
+	color: #666;
+	margin-bottom: torem(48px)
+}
+.cart-content .price .pri {
+	font-size: torem(40px)
+}
+.cart-content .price .add {
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	width: torem(340px);
+	height: torem(72px);
+	background: url(../images/cart/3.png) no-repeat;
+	background-size: torem(432px) torem(972px);
+	background-position: 0 torem(-527px);
+}
+.cart-content .price .add .text {
+	position: relative;
+	left: torem(115px);
+}
+.cart-content .price .add input {
+	width: torem(100px);
+	height: torem(68px);
+	text-align: center;
+}
+
+/*下单*/
+.order {
+	position: fixed;
+    bottom: torem(142px);
+    left: 0;
+    width: 100%;
+    height: torem(136px);
+    background-color: #fff;
+}
+.order::after {
+	content: '';
+    position: absolute;
+    background-color: #d9d9d9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+}
+.order .left {	
+	height: 100%;
+	line-height: torem(136px);
+	padding-left: torem(42px);
+    padding-right: 3.01333rem;
+}
+.order .left .check {
+	float: left;
+}
+.order .left .check i {
+	display: inline-block;
+	width: torem(58px);
+	height: torem(58px);
+	background: url(../images/cart/1.png) no-repeat;
+	background-size: torem(56px);
+	background-position: 0 torem(-282px);
+	vertical-align: middle;
+	margin-right: torem(34px)
+}
+.order .left .checked {
+	font-size: torem(40px)
+}
+.order .right {
+	float: right;
+	margin-right: torem(42px)
+}
+.order .right p {
+	color: #b4282d;
+	font-size: torem(40px)
+}
+.order .btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: torem(324px);
+	height: 100%;
+	line-height: torem(136px);
+	text-align: center;
+	font-size: torem(40px);
+	color: #fff;
+	background-color: #b4282d;
+}
